@@ -1,3 +1,4 @@
+-- Tarefa #2
 CREATE DATABASE EditiveDB
 	use EditiveDB
 
@@ -17,7 +18,7 @@ CREATE DATABASE EditiveDB
 		,Nome VARCHAR(120)
 		,DescriçãO VARCHAR(120)
 		)
-	CREATE TABLE Classe_Habilidade
+	CREATE TABLE ClasseHabilidade
 	(
 		ClasseId VARCHAR FOREIGN KEY REFERENCES Classe(Id)
 		,HabilidadeId VARCHAR FOREIGN KEY REFERENCES Habilidade(Id)
@@ -26,3 +27,24 @@ CREATE DATABASE EditiveDB
 	(	HabilidadeId VARCHAR(18) PRIMARY KEY
 		,Nome TEXT
 		)
+	
+	-- Tarefa #3
+	INSERT INTO Usuario (UsuarioId, Email, Senha)
+	VALUES ('Willow', 'willsow@gmail.com', 'SteW#123')
+
+	INSERT INTO Personagens (PersonagensId, NomePersonagem, UsuarioId, ClasseId)
+	VALUES ('Willson', 'WillsonTheDestroyer')
+	FROM PRIMARY KEY UsuarioId WHERE Usuario
+	FROM PRIMARY KEY ClasseId WHERE Classe
+
+	INSERT INTO Classe (ClasseId, Nome, Descrição)
+	VALUES ('Ranger1', 'Ranger', 'Ranger, patrulheiro focado em ataques de arco')
+	
+	INSERT INTO ClasseHabilidade
+	FROM PRIMARY KEY ClasseId WHERE Classe
+	FROM PRIMARY KEY HabilidadeId WHERE Habilidade
+
+	INSERT INTO Habilidade (HabilidadeId, Nome)
+	VALUES ('Ranger001', 'Atirar')
+
+	-- Tarefa #4
